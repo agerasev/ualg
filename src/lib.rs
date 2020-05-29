@@ -1,9 +1,10 @@
-pub mod vec;
+#![no_std]
 
-#[cfg(test)]
-mod tests {
-    #[test]
-    fn it_works() {
-        assert_eq!(2 + 2, 4);
-    }
-}
+#[cfg(feature = "std")]
+extern crate std;
+
+mod scal;
+pub use scal::*;
+
+mod vec;
+pub use vec::*;

@@ -1,11 +1,28 @@
 [package]
 name = "ualg"
-version = "0.0.1"
+version = "0.0.2"
 authors = ["Alexey Gerasev <alexey.gerasev@gmail.com>"]
 edition = "2018"
+description = "Lightweight algebra library"
+documentation = "https://docs.rs/ualg"
+homepage = "https://github.com/agerasev/ualg"
+repository = "https://github.com/agerasev/ualg"
+license = "MIT/Apache-2.0"
+readme = "README.md"
+keywords = ["algebra", "vector"]
+categories = ["algorithms", "science", "no-std"]
 
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+[features]
+default = ["std"]
+std = []
+
 
 [dependencies]
-num-traits = "0.2"
-#generic-array = "0.14.1"
+
+[dependencies.num-traits]
+version = "0.2"
+default-features = false
+
+[dependencies.alga]
+version = "0.9.3"
+default-features = false
